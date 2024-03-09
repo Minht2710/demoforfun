@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    margin: auto;
+}
+.layout{
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    background: url(../img/backgroundhover1.jpg) center no-repeat;
+    transition: background 0.5 ease;
+}
+.buttonGroup{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buttonFunction{
+    margin: 20px;
+    text-transform: uppercase;
+    background-color: greenyellow;
+    color: aliceblue;
+    padding: 20px 40px;
+    border-radius: 30px;
+    transition: background-color 0.5s ease;
+}
+.buttonFunction:first-child{
+    background-color: orangered;
+}
+
+.buttonFunction:hover{
+    background-color: red;  
+}
+
+/* responsive page */
+@media screen and (max-width: 425px) {
+    .container{
+        max-width: auto;
+        margin: 0 10px;
+    }
+    .buttonFunction{
+        font-size: 15px;
+        margin: 10px;
+        padding: 5px 10px;
+    }
+}
+@media screen and (max-width: 725px) {
+    .container{
+        max-width: 400px;
+    }
+}
+@media screen and (max-width: 1240px) {
+    .container{
+        max-width: 700px;
+    }
+}
+@media screen and (min-width: 1241px) {
+    .container{
+        max-width: 1200px;
+    }
+}
