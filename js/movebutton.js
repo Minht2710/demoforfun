@@ -5,10 +5,12 @@ const newBackgroundImageUrl = "../img/backgroundhover2.jpg";
 
 firstButton.addEventListener("mouseenter", () => {
   buttonGroup.style.background = `url(${newBackgroundImageUrl}) center no-repeat`;
+  buttonGroup.style.backgroundSize = "cover"
 });
 
 firstButton.addEventListener("mouseleave", () => {
-  buttonGroup.style.background= "url(../img/backgroundhover1.jpg) center no-repeat";
+  buttonGroup.style.background= "url(../img/background1.jpg) center no-repeat";
+  buttonGroup.style.backgroundSize = "cover"
 });
 // Function để thay đổi vị trí của button khi di chuột qua
 const changePosition = () => {

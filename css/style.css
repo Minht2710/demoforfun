@@ -10,10 +10,18 @@
     height: 100vh;
     width: 100%;
     text-align: center;
-    background: url(../img/backgroundhover1.jpg) center no-repeat;
-    transition: background 0.5 ease;
+    background: url(../img/background1.jpg) center no-repeat;
+    background-size:cover;
+    transition: background 0.5s ease;
+    overflow: hidden;
+}
+
+.buttonFunction:first-child:hover ~ .layout {
+    background: url(../img/backgroundhover2.jpg) center no-repeat; /* Background mới khi hover */
 }
 .buttonGroup{
+    border: none;
+    outline: none;
     height: 100vh;
     width: 100%;
     display: flex;
@@ -23,7 +31,7 @@
 .buttonFunction{
     margin: 20px;
     text-transform: uppercase;
-    background-color: greenyellow;
+    background-color: rgb(47, 144, 255);
     color: aliceblue;
     padding: 20px 40px;
     border-radius: 30px;
@@ -61,5 +69,30 @@
 @media screen and (min-width: 1241px) {
     .container{
         max-width: 1200px;
+    }
+}
+
+
+h3 {
+    padding: 20px;
+    border-radius:20px;
+    margin-top: 50px;
+    transform: translateY(50%);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    background-size: 200%;
+    color: aliceblue;
+    text-transform: uppercase;
+    animation: animationBackground 10s infinite; /* Áp dụng keyframes animation */
+}
+
+@keyframes animationBackground {
+    0% {
+        background-position: 0% 50%; /* Đặt vị trí ban đầu cho gradient */
+    }
+    50% {
+        background-position: 100% 50%; /* Đặt vị trí cuối cùng cho gradient */
+    }
+    100% {
+        background-position: 0% 50%; /* Đặt vị trí ban đầu cho gradient */
     }
 }
